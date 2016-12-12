@@ -1,7 +1,7 @@
 #ifndef NSU_DFS
 #define NSU_DFS
 
-#incldue <vector>
+#include <vector>
 
 // color - цвет вершины (0, 1, 2)
 // time_in - время захода в вершину
