@@ -21,7 +21,7 @@ void dfs(const vector<vector<int>> & graph, const int start,
 	}
 	
 	time_out[start] = dfs_timer++;
-	color[start] = 2;	
+	color[start] = 2;
 }
 
 #endif
