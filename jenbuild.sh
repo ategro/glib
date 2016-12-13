@@ -17,4 +17,4 @@ cd ../doc
 doxygen ./Doxyfile
 
 cd ..
-cppcheck --enable=all --inconclusive --xml --xml-version=2 --suppress=missingIncludeSystem -Iinclude/ src/ test/*.cpp 2> build/cppcheck.xml
+cppcheck --enable=all --inconclusive --xml --xml-version=2 --suppress=missingIncludeSystem -Iinclude/ src/ tests/*.cpp 2> build/cppcheck.xml
