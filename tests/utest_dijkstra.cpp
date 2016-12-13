@@ -2,6 +2,7 @@
 #include "dijkstra.hpp"
  
 using std::vector;
+using std::pair;
 
 TEST(Dijkstratest, simple) {
 	vector<vector<pair<int, int>>> graph(3);
@@ -11,7 +12,7 @@ TEST(Dijkstratest, simple) {
 	vector<int> distance(3);
 	vector<int> parent(3);
 
-	bfs(graph, start, used, distance, parent);
+	dijkstra(graph, start, used, distance, parent);
 	
 	EXPECT_EQ(true,  used[0]);
 	EXPECT_EQ(true,  used[1]);
