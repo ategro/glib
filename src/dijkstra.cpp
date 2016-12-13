@@ -5,7 +5,7 @@ using std::vector;
 constexpr int inf = 1000000000;
 
 void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start, 
-		vector<bool> used, vector<int> & distance, vector<int> & parent) {
+		vector<bool> & used, vector<int> & distance, vector<int> & parent) {
 	int n = graph.size();
 
 	used = vector<bool>(n); 
@@ -13,7 +13,7 @@ void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start,
 	parent = vector<int>(n);
 
 
-	distance[s] = 0;
+	distance[start] = 0;
 	vector<char> used(n);
 
 	for (int i = 0; i < n; ++i) {
@@ -37,6 +37,5 @@ void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start,
 				parent[to] = v;
 			}
 		}
+    }
 }
-
-#endif

@@ -23,7 +23,7 @@
  */
 
 void dijkstra(const std::vector<std::vector<std::pair<int, int>>> & graph, 
-		const int start, std::vector<bool> used, std::vector<int> & distance,
-		std::vector<int> & parent)
+		const int start, std::vector<bool> & used, 
+		std::vector<int> & distance, std::vector<int> & parent)
 
 #endif
