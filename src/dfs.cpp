@@ -1,12 +1,7 @@
-#ifndef NSU_DFS
-#define NSU_DFS
+#include "dfs.hpp"
 
-#include <vector>
+using std::vector;
 
-// color - цвет вершины (0, 1, 2)
-// time_in - время захода в вершину
-// time_out - время выхода из вершины
-// start_time - начальное время
 void dfs(const vector<vector<int>> & graph, const int start, 
 		vector<bool> & color, vector<int> & time_in, vector<int> & time_out,
 		int & start_time = 0) {
@@ -23,5 +18,3 @@ void dfs(const vector<vector<int>> & graph, const int start,
 	time_out[start] = dfs_timer++;
 	color[start] = 2;
 }
-
-#endif
