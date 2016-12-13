@@ -28,7 +28,7 @@ void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start,
 			break;
 		}
 
-		for (size_t j = 0; j < graph[v].size(); ++j) {
+		for (int j = 0; j < graph[v].size(); ++j) {
 			int to = graph[v][j].first;
 			int len = graph[v][j].second;
 
@@ -36,6 +36,7 @@ void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start,
 				distance[to] = distance[v] + len;
 				parent[to] = v;
 			}
+		}
 }
 
 #endif
