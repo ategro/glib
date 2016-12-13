@@ -13,8 +13,8 @@ TEST(Dijkstratest, simple) {
 
 	bfs(graph, start, used, distance, parent);
 	
-	EXPECT_EQ(true, used[0]);
-	EXPECT_EQ(true, used[1]);
+	EXPECT_EQ(true,  used[0]);
+	EXPECT_EQ(true,  used[1]);
 	EXPECT_EQ(false, used[2]);
 	EXPECT_EQ(0,          distance[0]);
 	EXPECT_EQ(5,          distance[1]);
