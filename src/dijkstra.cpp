@@ -1,6 +1,7 @@
 ﻿#include "dijkstra.hpp"
 
 using std::vector;
+using std::pair;
 
 constexpr int inf = 1000000000;
 
