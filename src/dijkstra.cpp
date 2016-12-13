@@ -15,7 +15,6 @@ void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start,
 
 
 	distance[start] = 0;
-	vector<char> used(n);
 
 	for (int i = 0; i < n; ++i) {
         	int v = -1;
