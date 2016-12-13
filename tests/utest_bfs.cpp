@@ -5,7 +5,7 @@ using std::vector;
 
 TEST(BFStest, simple) {
 	vector<vector<int>> graph(3);
-	graph[1].push_back(2);
+	graph[0].push_back(1);
 	int start = 0;
 	vector<bool> used(3);
 	vector<int> distance(3);
