@@ -5,7 +5,7 @@ add_subdirectory(googletest)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-add_executable(utest utest_bfs.cpp)
+add_executable(utest utest_dfs.cpp)
 
 target_link_libraries (utest gtest gtest_main glib)
 add_test(utest utest)
