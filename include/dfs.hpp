@@ -15,6 +15,7 @@
 	@param[in, out] time_in - времена входов в вершины
 	@param[in, out] time_out - времена выходов из вершин
 	@param[in, out] start_time - начальное время
+	@return end_time - время окончания обхода графа
 
 	На вход алгоритма подаётся заданный граф (невзвешенный), и номер стартовой
 	вершины start. Граф может быть как ориентированным, так и
@@ -34,8 +35,8 @@
 	графе.
  */
 
-void dfs(const std::vector<std::vector<int>> & graph, const int start, 
+int dfs(const std::vector<std::vector<int>> & graph, const int start, 
 		std::vector<bool> & color, std::vector<int> & time_in, 
-		std::vector<int> & time_out, int & start_time = 0);
+		std::vector<int> & time_out, int start_time = 0);
 
 #endif
