@@ -27,6 +27,7 @@ void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start,
 		if (distance[v] == inf) {
 			break;
 		}
+		used[v] = true;
 
 		for (int j = 0; j < graph[v].size(); ++j) {
 			int to = graph[v][j].first;
