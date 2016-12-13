@@ -2,6 +2,7 @@
 #include <queue>
 
 using std::vector;
+using std::queue;
 
 void bfs(const vector<vector<int>> & graph, const int start,
 		vector<bool> & used, vector<int> & distance, vector<int> & parent) {
@@ -12,7 +13,7 @@ void bfs(const vector<vector<int>> & graph, const int start,
 	while (!q.empty()) {
 		int v = q.front();
 		q.pop();
-		for (size_t i = 0; i < graph[v].size(); ++i) {
+		for (int i = 0; i < graph[v].size(); ++i) {
 			int to = graph[v][i];
 			if (!used[to]) {
 				q.push(to);

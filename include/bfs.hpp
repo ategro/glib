@@ -1,7 +1,7 @@
 #ifndef NSU_BFS
 #define NSU_BFS
 
-#incldue <vector>
+#include <vector>
 
 /**
 	@brief Алгоритм обхода в ширину
