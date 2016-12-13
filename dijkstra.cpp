@@ -5,17 +5,17 @@
 
 constexpr int inf = 1000000000;
 
-// color - пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (0, 1, 2)
-// time_in - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-// time_out - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-// start_time - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+// color - цвет вершины (0, 1, 2)
+// time_in - время захода в вершину
+// time_out - время выхода из вершины
+// start_time - начальное время
 void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start, 
 		vector<bool> used, vector<int> & distance, vector<int> & parent) {
-	int n = graph.size(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	int n = graph.size(); // колличество вершин
 	
-	used = vector<bool>(n); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
-	distance = vector<int>(n, inf); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ start пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
-	parent = vector<int>(n); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	used = vector<bool>(n); // посещенение вершин
+	distance = vector<int>(n, inf); // растояния от вершины start до других вершин
+	parent = vector<int>(n); // родители вершин
 	
 
 	distance[s] = 0;
@@ -32,6 +32,7 @@ void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start,
 		if (distance[v] == inf) {
 			break;
 		}
+		used[v] = true;
 
 		for (size_t j = 0; j < graph[v].size(); ++j) {
 			int to = graph[v][j].first;
@@ -41,6 +42,8 @@ void dijkstra(const vector<vector<pair<int, int>>> & graph, const int start,
 				distance[to] = distance[v] + len;
 				parent[to] = v;
 			}
+		}
+	}
 }
 
 #endif
