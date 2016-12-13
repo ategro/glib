@@ -3,7 +3,7 @@
 using std::vector;
 
 int dfs(const vector<vector<int>> & graph, const int start, 
-		vector<bool> & color, vector<int> & time_in, vector<int> & time_out,
+		vector<int> & color, vector<int> & time_in, vector<int> & time_out,
 		int start_time) {
 	time_in[start] = start_time++;
 	color[start] = 1;

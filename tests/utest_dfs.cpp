@@ -7,7 +7,7 @@ TEST(DFStest, simple) {
 	vector<vector<int>> graph(3);
 	graph[0].push_back(1);
 	int start = 0;
-	vector<bool> color(3);
+	vector<int> color(3);
 	vector<int> time_in(3);
 	vector<int> time_out(3);
 

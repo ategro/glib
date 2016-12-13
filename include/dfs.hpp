@@ -11,7 +11,7 @@
 	@brief Алгоритм обхода в глубину
 	@param[in] graph - список смежности вершин
 	@param[in] start - стартовая вершина
-	@param[in, out] color - цвета вершин
+	@param[in, out] color - цвета (0, 1, 2) вершин
 	@param[in, out] time_in - времена входов в вершины
 	@param[in, out] time_out - времена выходов из вершин
 	@param[in, out] start_time - начальное время
@@ -36,7 +36,7 @@
  */
 
 int dfs(const std::vector<std::vector<int>> & graph, const int start, 
-		std::vector<bool> & color, std::vector<int> & time_in, 
+		std::vector<int> & color, std::vector<int> & time_in, 
 		std::vector<int> & time_out, int start_time = 0);
 
 #endif
