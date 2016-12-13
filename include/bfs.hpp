@@ -3,6 +3,10 @@
 
 #include <vector>
 
+/** 
+	@file bfs.hpp
+ */
+
 /**
 	@brief Алгоритм обхода в ширину
 	@param[in] graph - список смежности вершин
